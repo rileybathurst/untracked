@@ -1,5 +1,6 @@
 {
   "name": "untracked",
+  "author": "Riley Bathurst <riley@rileybathurst.com> (https://rileybathurst.com)",
   "type": "module",
   "version": "0.0.1",
   "engines": {
