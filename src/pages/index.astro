@@ -1,5 +1,12 @@
 ---
 import "../styles/app.css";
+
+import fetchApi from "../library/strapi";
+import type AddressType from "../types/articles";
+
+const address = await fetchApi<AddressType>({
+  endpoint: "address", // the content type to fetch
+});
 ---
 
 <html lang="en">
@@ -13,7 +20,7 @@ import "../styles/app.css";
   </head>
   <body>
     <h1>Untracked Agency</h1>
-    <p>Sales & Marketing based in Tahoe City, CA</p>
+    <p>Sales & Marketing based in {address.addressLocality}, CA</p>
     <a href="mailto:info@untrackedagency.com">info@untrackedagency.com</a>
   </body>
 </html>
